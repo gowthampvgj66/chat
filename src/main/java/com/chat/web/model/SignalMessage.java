@@ -9,10 +9,8 @@ public class SignalMessage {
     private String candidate; // used for ICE
     private boolean videoEnabled; // whether video is enabled
 
-    // Default constructor (important for deserialization)
     public SignalMessage() {}
 
-    // Constructor for offer/answer/ice with video flag
     public SignalMessage(String type, String sender, String receiver, String sdpOrCandidate, boolean videoEnabled) {
         this.type = type;
         this.sender = sender;
@@ -31,7 +29,6 @@ public class SignalMessage {
         }
     }
 
-    // Constructor for "timeout", "end", and for video etc.
     public SignalMessage(String type, String sender, String receiver, String sdp, String candidate, boolean videoEnabled) {
         this.type = type;
         this.sender = sender;
@@ -41,52 +38,21 @@ public class SignalMessage {
         this.videoEnabled = videoEnabled;
     }
 
-    // Getters and setters
-    public String getType() {
-        return type;
-    }
+    public String getType() { return type; }
+    public void setType(String type) { this.type = type; }
 
-    public void setType(String type) {
-        this.type = type;
-    }
+    public String getSender() { return sender; }
+    public void setSender(String sender) { this.sender = sender; }
 
-    public String getSender() {
-        return sender;
-    }
+    public String getReceiver() { return receiver; }
+    public void setReceiver(String receiver) { this.receiver = receiver; }
 
-    public void setSender(String sender) {
-        this.sender = sender;
-    }
+    public String getSdp() { return sdp; }
+    public void setSdp(String sdp) { this.sdp = sdp; }
 
-    public String getReceiver() {
-        return receiver;
-    }
+    public String getCandidate() { return candidate; }
+    public void setCandidate(String candidate) { this.candidate = candidate; }
 
-    public void setReceiver(String receiver) {
-        this.receiver = receiver;
-    }
-
-    public String getSdp() {
-        return sdp;
-    }
-
-    public void setSdp(String sdp) {
-        this.sdp = sdp;
-    }
-
-    public String getCandidate() {
-        return candidate;
-    }
-
-    public void setCandidate(String candidate) {
-        this.candidate = candidate;
-    }
-
-    public boolean isVideoEnabled() {
-        return videoEnabled;
-    }
-
-    public void setVideoEnabled(boolean videoEnabled) {
-        this.videoEnabled = videoEnabled;
-    }
+    public boolean isVideoEnabled() { return videoEnabled; }
+    public void setVideoEnabled(boolean videoEnabled) { this.videoEnabled = videoEnabled; }
 }

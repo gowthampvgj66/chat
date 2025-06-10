@@ -11,9 +11,20 @@ public class TypingStatus {
         this.isTyping = isTyping;
     }
 
-    public String getSender() { return sender; }
-    public void setSender(String sender) { this.sender = sender; }
-    
-    public boolean isTyping() { return isTyping; }
-    public void setTyping(boolean typing) { isTyping = typing; }
+    public String getSender() {
+        return sender;
+    }
+
+    public void setSender(String sender) {
+        this.sender = sender;
+    }
+
+    public boolean isTyping() {
+        return isTyping;
+    }
+
+    public void setTyping(boolean typing) {
+        isTyping = typing;
+    }
+   
 }
